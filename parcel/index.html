@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+
+        <!-- <h1 class="title">PARCEL MANAGEMENT SYSTEM</h1> -->
+
+        <div class="banner1">
+            <button class="city" id="mumbaiButton" onclick="showParcelsByCity('Mumbai')">Mumbai</button>
+            <button class="city" id="delhiButton" onclick="showParcelsByCity('Delhi')">Delhi</button>
+            <button class="city" id="kolkataButton" onclick="showParcelsByCity('Kolkata')">Kolkata</button>
+        </div>
+
+        <div class="banner2">
+            <div class="parcel-list" id="parcelList"></div>
+        </div>
+
+        <div class="selected-parcel">
+            Selected parcel : - <span class="outprint" id="selectedParcel"></span>
+        </div>
+
+        <div class="form-container">
+            <div class="field">
+                <table cellspacing="20px">
+                <tr>
+                    <td><label for="parcelName">Enter Parcel Name:</label></td>
+                    <td><input class="textbox" type="text" id="parcelName" placeholder=" Enter parcel name"></td>
+                </tr>
+                <tr>
+                    <td><label for="parcelGroup">Select Location Group:</label></td>
+                    <td>
+                        <select class="textbox1" id="parcelGroup">
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Kolkata">Kolkata</option>
+                        </select>
+                    </td>
+                </tr>
+                </table>
+            </div>
+        </div>    
+            
+
+            
+            
+
+            <div class="buttons">
+                <!-- <button class="btn" onclick="addParcel()">Add Parcel</button> -->
+                <button class="btn" onclick="addAfter()">Add After</button>
+                <button class="btn" onclick="addBefore()">Add Before</button>
+                <button class="btn" onclick="replaceParcel()">Replace</button>
+                <button class="btn" onclick="deleteParcel()">Delete</button>
+                <button class="btn" onclick="refresh()">Refresh</button>
+                <button class="btn" onclick="showFinalData()">Show Final</button>
+            </div>
+        
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
